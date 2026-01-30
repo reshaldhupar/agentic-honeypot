@@ -1,0 +1,20 @@
+This project implements an AI-powered Agentic Honeypot system for detecting online scams
+such as bank fraud, UPI fraud, and phishing attempts.
+
+The system exposes a REST API that receives incoming messages along with a session ID and
+conversation history. Each message is analyzed for scam intent using urgency-based and
+financial keywords commonly used by scammers.
+
+When scam intent is detected, an autonomous AI agent is activated. The agent engages the
+scammer in a believable, human-like manner without revealing that detection has occurred.
+The agent supports multi-turn conversations and adapts its responses dynamically.
+
+During the interaction, the system extracts actionable scam intelligence including UPI IDs,
+phone numbers, phishing links, and suspicious keywords using pattern-based analysis.
+
+After sufficient engagement and confirmation of scam intent, the system sends the final
+structured intelligence to the mandatory GUVI evaluation endpoint as required by the
+hackathon guidelines.
+
+The solution follows ethical AI principles by avoiding impersonation, harassment, or illegal
+instructions, and ensures responsible handling of sensitive data.
