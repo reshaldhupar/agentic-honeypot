@@ -1,20 +1,9 @@
-This project implements an AI-powered Agentic Honeypot system for detecting online scams
-such as bank fraud, UPI fraud, and phishing attempts.
+This project implements an AI-powered Agentic Honeypot system designed to engage and analyze potentially fraudulent online messages, including bank-related scams, UPI fraud attempts, and phishing communications.
 
-The system exposes a REST API that receives incoming messages along with a session ID and
-conversation history. Each message is analyzed for scam intent using urgency-based and
-financial keywords commonly used by scammers.
+The system exposes a REST API that accepts incoming messages along with a session identifier. Each message is analyzed internally using urgency-based and financial keywords commonly associated with scam behavior.
 
-When scam intent is detected, an autonomous AI agent is activated. The agent engages the
-scammer in a believable, human-like manner without revealing that detection has occurred.
-The agent supports multi-turn conversations and adapts its responses dynamically.
+When suspicious intent is identified, the honeypot responds with neutral, human-like replies that simulate uncertainty. This approach helps prolong interaction without revealing that detection has occurred, thereby mimicking realistic user behavior.
 
-During the interaction, the system extracts actionable scam intelligence including UPI IDs,
-phone numbers, phishing links, and suspicious keywords using pattern-based analysis.
+All scam detection logic and pattern-based analysis are handled internally. To comply with the evaluation platform’s strict response schema requirements, the API returns a minimal JSON response containing only the required fields. Sensitive intelligence and detection signals are intentionally not exposed through the API response.
 
-After sufficient engagement and confirmation of scam intent, the system sends the final
-structured intelligence to the mandatory GUVI evaluation endpoint as required by the
-hackathon guidelines.
-
-The solution follows ethical AI principles by avoiding impersonation, harassment, or illegal
-instructions, and ensures responsible handling of sensitive data.
+The solution follows ethical AI principles, avoids impersonation or harmful behavior, and ensures responsible handling of potentially sensitive data while prioritizing security, stealth, and platform compliance.
